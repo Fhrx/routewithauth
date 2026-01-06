@@ -1,16 +1,121 @@
-# React + Vite
+# React Auth Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React dashboard template with authentication and role‑based access control.  
+Built using **React, Vite, React Router, Tailwind CSS**, and **shadcn/ui** — suitable for learning authentication flow and building a portfolio project.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- Public & protected routes  
+- Login & logout system  
+- Role‑based access control (User & Admin)  
+- Persistent session using `localStorage`  
+- Responsive dashboard layout (Navbar & Sidebar)  
+- Modern UI using Tailwind CSS & shadcn/ui  
+- Custom 404 (Not Found) page  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 👤 Dummy Accounts (For Testing)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Role  | Email           | Password     |
+|------|-----------------|--------------|
+| Admin | admin@mail.com | admin12345 |
+| User  | user@mail.com  | user12345  |
+
+---
+
+## 🛠 Tech Stack
+
+- **React**
+- **Vite**
+- **React Router v6**
+- **Tailwind CSS**
+- **shadcn/ui**
+- **React Context API**
+- **LocalStorage**
+- **lucide-react**
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── assets
+├── components
+│   ├── ui
+│   ├── Layout.jsx
+│   ├── Navbar.jsx
+│   ├── Sidebar.jsx
+│   └── RoleBadge.jsx
+├── context
+│   └── AuthContext.jsx
+├── pages
+│   ├── dashboard
+│   │   ├── Overview.jsx
+│   │   ├── Profile.jsx
+│   │   ├── Settings.jsx
+│   │   └── Admin.jsx
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   └── NotFound.jsx
+├── routes
+│   ├── ProtectedRoute.jsx
+│   └── AdminRoute.jsx
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 🧭 Routes Overview
+
+| Route | Access |
+|------|-------|
+| `/` | Public |
+| `/login` | Public |
+| `/dashboard` | Authenticated |
+| `/dashboard/profile` | Authenticated |
+| `/dashboard/settings` | Authenticated |
+| `/admin` | Admin only |
+| `*` | Not Found |
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Fhrx/routewithauth.git
+cd routewithauth
+pnpm install
+pnpm dev
+```
+
+Open in browser:  
+`http://localhost:5173`
+
+---
+
+## 🔐 Authentication Flow
+
+Authentication is handled using **React Context API**.  
+User data is stored in `localStorage` to keep the session active after page reload.  
+Route protection is implemented using custom `ProtectedRoute` and `AdminRoute` components.
+
+---
+
+## 📌 Future Improvements
+
+- Backend authentication (JWT)
+- Register & Forgot Password pages
+- Admin user management
+- Charts & analytics
+- Dark mode
+
+---
+
+## 📄 License
+
+MIT License
