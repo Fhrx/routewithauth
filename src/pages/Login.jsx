@@ -19,7 +19,9 @@ import {
   Smartphone,
   Laptop,
   ArrowRight,
-  ChevronRight
+  ChevronRight,
+  Home,
+  ArrowLeft
 } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -122,6 +124,10 @@ export default function Login() {
     setPassword(account.password);
   };
 
+  const handleBackToHome = () => {
+    navigate("/");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex items-center justify-center p-4 md:p-8">
       {/* Animated Background */}
@@ -134,6 +140,17 @@ export default function Login() {
         {/* Left: Branding & Info */}
         <div className={`hidden md:flex flex-col justify-center p-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
           <div className="mb-10">
+            {/* Home Button for Mobile in left panel */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleBackToHome}
+              className="mb-6 gap-2 w-fit"
+            >
+              <Home className="h-4 w-4" />
+              Back to Home
+            </Button>
+
             <div className="flex items-center gap-3 mb-6">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary/70">
                 <Shield className="h-6 w-6 text-white" />
@@ -222,6 +239,17 @@ export default function Login() {
           className={`flex flex-col justify-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <div className="rounded-2xl border bg-background/80 backdrop-blur-sm p-6 md:p-8 shadow-2xl">
+            {/* Back to Home Button for Mobile */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleBackToHome}
+              className="md:hidden mb-6 gap-2 w-full justify-center"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Homepage
+            </Button>
+
             {/* Login Header */}
             <div className="mb-8 text-center">
               <div className="mb-4 flex justify-center">
@@ -426,8 +454,8 @@ export default function Login() {
               </Button>
             </div>
 
-            {/* Sign Up */}
-            <div className="mt-8 text-center">
+            {/* Sign Up & Home Links */}
+            <div className="mt-8 space-y-4 text-center">
               <p className="text-sm text-muted-foreground">
                 Don't have an account?{" "}
                 <Link 
@@ -437,6 +465,20 @@ export default function Login() {
                   Request access
                 </Link>
               </p>
+              
+              {/* Home Link */}
+              <div className="pt-4 border-t">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleBackToHome}
+                  className="gap-2 hover:bg-primary/10"
+                >
+                  <Home className="h-4 w-4" />
+                  Return to Homepage
+                </Button>
+              </div>
+              
               <p className="mt-2 text-xs text-muted-foreground">
                 Contact administrator for new account registration
               </p>
