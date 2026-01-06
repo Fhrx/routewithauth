@@ -7,12 +7,13 @@ This project is designed as a **learning project, portfolio showcase, and PKL ta
 
 ## 📸 Screenshots
 
-> You can replace the image paths with real screenshots from your project.
+### 🏠 Home Page
+![Home Page](./screenshots/home.png)
 
 ### 🔐 Login Page
 ![Login Page](./screenshots/login.png)
 
-### 🏠 Dashboard Overview
+### 📠 Dashboard Overview
 ![Dashboard Overview](./screenshots/dashboard-overview.png)
 
 ### 🧑 Profile Page
