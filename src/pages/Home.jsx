@@ -47,15 +47,15 @@ export default function Home() {
         </div>
 
         <Link to="/login">
-          <Button
-            variant="outline"
-            className="group gap-2 hover:border-primary hover:bg-primary/5 transition-all hover:scale-105 active:scale-95"
-          >
-            <Lock className="h-4 w-4" />
-            Sign In
-            <ArrowRight className="h-3 w-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-          </Button>
-        </Link>
+  <Button
+    variant="outline"
+    className="group gap-2 hover:border-primary hover:bg-primary/5 transition-all hover:scale-105 active:scale-95"
+  >
+    <Lock className="h-4 w-4" />
+    Log In
+    <ArrowRight className="h-3 w-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+  </Button>
+</Link>
       </header>
 
       {/* Hero Section */}
