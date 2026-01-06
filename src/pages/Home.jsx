@@ -47,15 +47,15 @@ export default function Home() {
         </div>
 
         <Link to="/login">
-  <Button
-    variant="outline"
-    className="group gap-2 hover:border-primary hover:bg-primary/5 transition-all hover:scale-105 active:scale-95"
-  >
-    <Lock className="h-4 w-4" />
-    Log In
-    <ArrowRight className="h-3 w-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-  </Button>
-</Link>
+          <Button
+            variant="outline"
+            className="group gap-2 hover:border-primary hover:bg-primary/5 transition-all hover:scale-105 active:scale-95"
+          >
+            <Lock className="h-4 w-4" />
+            Log In
+            <ArrowRight className="h-3 w-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+          </Button>
+        </Link>
       </header>
 
       {/* Hero Section */}
@@ -350,7 +350,7 @@ export default function Home() {
               </Link>
               <button
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => alert('Documentation coming soon!')}
+                onClick={() => window.open('https://docs.google.com/document/d/1B7c9taYrmSp4_YhrPjRSMQZJ-yFAQF6u11I04e8kf_k/edit?tab=t.0', '_blank')}
               >
                 Docs
               </button>
